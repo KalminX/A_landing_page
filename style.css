@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding: 10px;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+.navbar img{
+    margin-right: 1.5em;
+    width: 100px;
+    height: 30px;
+    padding: 15px;
+}
+.navbar-links{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+}
+.navbar-links li{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    gap: 5px;
+    margin: 5px 15px;
+    font-size: large;
+}
+.navbar-links li::after{
+    content: url("images/icon-arrow-down.svg");
+    position: absolute;
+    right: -14px;
+    top: -2px;
+}
+.navbar-links a{
+    display: block;
+    text-decoration: none;
+    justify-content: space-between;
+    gap: 20px;
+    color: hsl(0, 0%, 41%);
+}
+.login-and-register{
+    display: flex;
+    gap: 30px;
+    margin: 15px 10px;
+}
+.login-and-register a{
+    text-decoration: none;
+}
+.register{
+    border: 1px solid;
+    padding: 8px 16px;
+    border-radius: 8px;
+    width: 4em;
+}
+.login{
+    font-size: large;
+}
+
+/********** style for content **********/
+.content{
+    display: flex;
+    margin-top: 3em;
+}
+.large-image img{
+    width: 600px;
+}
+.side-bar{
+    width: 10%;
+    background-color: rgb(139, 10, 10);
+}
