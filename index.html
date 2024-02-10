@@ -8,6 +8,11 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Merriweather:ital,wght@1,300&family=Montserrat:wght@100&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap"
+    rel="stylesheet">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -24,37 +29,119 @@
 </head>
 
 <body>
-
   <nav class="navbar">
-    <img src="images/logo.svg" alt="">
+    <img class="logo" src="images/logo.svg" alt="">
+    <div></div>
     <ul class="navbar-links">
-      <li><a href="">Features</a></li>
-      <li><a href="">Company</a></li>
+      <li><a href="" class="dropdown">Features</a>
+        <div class="feature-dropdown">
+          <div class="todo">Todo List</div>
+          <div class="calendar">Calendar</div>
+          <div class="reminder">Reminders</div>
+          <div class="planning">Planning</div>
+        </div>
+      </li>
+      <li><a href="" class="dropdown">Company</a>
+        <div class="company-dropdown">
+          <div>History</div>
+          <div>Our Team</div>
+          <div>Blog</div>
+        </div>
+      </li>
       <li><a href="">Careers</a></li>
       <li><a href="">About</a></li>
     </ul>
-    <div><a href="">Login</a></div>
-    <div><a href="">Register</a></div>
+    <div class="login-and-register">
+      <div id="login"><a href="">Login</a></div>
+      <div><a href="" class="register">Register</a></div>
+    </div>
   </nav>
+  <div class="hamburger-menu" onclick="toggleMenu()">
+    <span class="line1"></span>
+    <span class="line2"></span>
+    <span class="line3"></span>
+  </div>
   <div class="content">
-    <div class="big-text">Make remote work</div>
-    <div>
-      Get your team in sync, no matter your location. <br>
-      Streamline processes, create team rituals, and <br>
-      watch productivity soar.
+    <div class="cover">
+      <div class="side-bar"></div>
+      <div class="info">
+        <div class="big-text">Make<br>remote work</div>
+        <div class="description">
+          <p>Get your team in sync, no matter your location. <br>
+            Streamline processes, create team rituals, and <br>
+            watch productivity soar
+          </p>
+        </div>
+        <a href="">
+          <div class="learn-more">Learn more</div>
+        </a>
+        <div class="water-mark">
+          <div><img src="images/client-databiz.svg" alt=""></div>
+          <div><img src="images/client-audiophile.svg" alt=""></div>
+          <div><img src="images/client-meet.svg" alt=""></div>
+          <div><img src="images/client-maker.svg" alt=""></div>
+        </div>
+      </div>
+      <div class="large-image">
+        <img src="images/image-hero-desktop.png" alt="">
+      </div>
+      <div class="side-bar"></div>
     </div>
-    <div>Learn more</div>
-    <div>
-      <img src="images/client-databiz.svg" alt="">
-      <img src="images/client-audiophile.svg" alt="">
-      <img src="images/client-meet.svg" alt="">
-      <img src="images/client-maker.svg" alt="">
+
+    <!------------Mobile Version--------->
+    <div id="overlay" class="overlay">
+      <ul class="navbar-links-mobile">
+        <li class="sec"><p href="" class="dropdown2">Features</p>
+          <div class="feature-dropdown2">
+            <div class="todo">Todo List</div>
+            <div class="calendar">Calendar</div>
+            <div class="reminder">Reminders</div>
+            <div class="planning">Planning</div>
+          </div>
+        </li>
+        <li class="sec"><p href="" class="dropdown2" id="company">Company</p>
+          <div class="company-dropdown2">
+            <div>History</div>
+            <div>Our Team</div>
+            <div>Blog</div>
+          </div>
+        </li>
+        <li>Careers</li>
+        <li><a href="">About</a></li>
+      </ul>
+      <div class="login-and-register2">
+        <div id="login"><a href="">Login</a></div>
+        <div><a href="" class="register">Register</a></div>
+      </div>
     </div>
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <div class="main-content">
+      <div class="large-image2">
+        <img src="images/image-hero-mobile.png" alt="">
+      </div>
+      <div class="big-text2">Make remote work</div>
+      <div class="description2">
+        <p>
+          Get your team in sync, no matter your <br>location.
+          Streamline processes, create <br>team rituals, and
+          watch productivity soar
+        </p>
+      </div>
+      <a href="">
+        <div class="learn-more2">Learn more</div>
+      </a>
+      <div class="water-mark2">
+        <div><img src="images/client-databiz.svg" alt=""></div>
+        <div><img src="images/client-audiophile.svg" alt=""></div>
+        <div><img src="images/client-meet.svg" alt=""></div>
+        <div><img src="images/client-maker.svg" alt=""></div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Numerous Oriabure</a>.
+    </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
